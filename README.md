@@ -1,16 +1,15 @@
-# flutter_movies
+# Lista de Filmes
 
-A new Flutter project.
+## Descrição
 
-## Getting Started
+O **Lista de Filmes** é um aplicativo simples que permite aos usuários visualizar uma lista de filmes, exibindo informações como título, ano de lançamento e uma imagem relacionada a cada filme.
 
-This project is a starting point for a Flutter application.
+## Recursos Principais
 
-A few resources to get you started if this is your first Flutter project:
+- Exibe uma lista de filmes com informações detalhadas.
+- Toque em um filme para ver mais detalhes.
+- Trata automaticamente imagens nulas ou indisponíveis.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Pré-requisitos
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Conexão à internet para carregar informações sobre os filmes.
