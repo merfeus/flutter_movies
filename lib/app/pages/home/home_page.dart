@@ -87,12 +87,34 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => ImageDetailPage(
-                                  imageUrl: item.primaryImage?.url ?? ""),
-                            ),
-                          );
+                          if (item.primaryImage?.url != null) {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => ImageDetailPage(
+                                    imageUrl: item.primaryImage!.url!),
+                              ),
+                            );
+                          } else {
+                            // Se a URL da imagem for nula ou vazia, você pode exibir uma imagem de substituição ou mostrar uma mensagem de erro.
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: Text("Erro"),
+                                  content:
+                                      Text("A imagem não está disponível."),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Text("Fechar"),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          }
                         },
                         child: Image.network(
                           item.primaryImage?.url ??
